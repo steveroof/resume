@@ -1,6 +1,6 @@
-import { IJob } from "./assets/data";
+import { IPosition } from "./model";
 
-export const Position: React.FC<IJob> = ({
+export const Position: React.FC<IPosition> = ({
   title,
   startDate,
   endDate,
@@ -8,7 +8,7 @@ export const Position: React.FC<IJob> = ({
 }) => {
   return (
     <>
-      <h3>{title}</h3>
+      <h4>{title}</h4>
       {/* todo: add duration */}
       <span>{`${startDate} - ${endDate}`}</span>
       <ul>

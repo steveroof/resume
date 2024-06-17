@@ -1,20 +1,18 @@
-import { Position } from "./Position";
-import { ITenure } from "./assets/data";
+import { PropsWithChildren } from "react";
+import { ITenure } from "./model";
 
-export const Tenure: React.FC<ITenure> = ({
+export const Tenure: React.FC<PropsWithChildren<ITenure>> = ({
   companyName,
   location,
   locationType,
-  jobs,
+  children,
 }) => {
   return (
     <>
-      <h2>{companyName}</h2>
+      <h3>{companyName}</h3>
       <span>{location}</span>
       <span>{locationType}</span>
-      {jobs.map((j, index) => (
-        <Position key={index} {...j} />
-      ))}
+      {children}
     </>
   );
 };

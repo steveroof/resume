@@ -1,22 +1,6 @@
-export interface IJob {
-  title: string;
-  startDate: string;
-  endDate: string;
-  experiences: string[];
-}
+import { IPosition, ITenure } from "../model";
 
-export interface ITenure {
-  companyName: string;
-  location: string;
-  locationType: string;
-  jobs: IJob[];
-}
-
-export interface IData {
-  tenures: ITenure[];
-}
-
-const signant_pi_senior: IJob = {
+const signant_pi_senior: IPosition = {
   title: "Senior Software Engineer",
   startDate: "May 2023",
   endDate: "Present",
@@ -36,7 +20,7 @@ const signant_pi_senior: IJob = {
   ],
 };
 
-const signant_pi_mid: IJob = {
+const signant_pi_mid: IPosition = {
   title: "Product Developer",
   startDate: "Mar 2018",
   endDate: "May 2023",
@@ -54,7 +38,7 @@ const signant_pi_mid: IJob = {
   ],
 };
 
-const signant_pi_associate: IJob = {
+const signant_pi_associate: IPosition = {
   title: "Associate Product Developer",
   startDate: "April 2015",
   endDate: "March 2018",
@@ -66,7 +50,7 @@ const signant_pi_associate: IJob = {
   ],
 };
 
-const signant_td: IJob = {
+const signant_td: IPosition = {
   title: "Programmer Analyst I",
   startDate: "April 2015",
   endDate: "March 2018",
@@ -77,53 +61,9 @@ const signant_td: IJob = {
   ],
 };
 
-const connolly_bsa: IJob = {
-  title: "Associate Business Systems Analyst",
-  startDate: "August 2012",
-  endDate: "October 2013",
-  experiences: [
-    "Worked directly with business users to identity and implement business needs with custom software.",
-    "Supported internal processes through database and user interface development.",
-    "Developed ETL skills and index/performance strategies working with large datasets.",
-    "Improved data modeling skills and strategic denomalization/data warehouse storage and reporting skills.",
-  ],
-};
-
-const rww_misc: IJob = {
-  title: "Database Application Developer",
-  startDate: "September 2010",
-  endDate: "August 2012",
-  experiences: [
-    "Identified automation and data storage needs within the company.",
-    "Worked to develop custom database applications from conception to production.",
-    "Considered best ways to model entity relationships in a table structure.",
-    "Laid out relational tables according to normalization rules.",
-    "Created stored procedures, triggers, and permissions on database objects.",
-    "Designed, tested, and rolled out custom user interfaces for the SQL server backend using Microsoft Access/VBA.",
-  ],
-};
-
-const signant: ITenure = {
+export const signant: ITenure = {
   companyName: "Signant Health",
   location: "Blue Bell, PA",
   locationType: "On Site & Hybrid",
   jobs: [signant_pi_senior, signant_pi_mid, signant_pi_associate, signant_td],
-};
-
-const connolly: ITenure = {
-  companyName: "Connolly, Inc.",
-  location: "Conshohocken, PA",
-  locationType: "On Site",
-  jobs: [connolly_bsa],
-};
-
-const realWinWin: ITenure = {
-  companyName: "RealWinWin",
-  location: "Philadelphia, PA",
-  locationType: "On Site",
-  jobs: [rww_misc],
-};
-
-export const myData: IData = {
-  tenures: [signant, connolly, realWinWin],
 };
