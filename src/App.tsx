@@ -1,5 +1,5 @@
 import { Tenure } from "./Tenure";
-import { myData } from "./data";
+import { myData } from "./assets/data";
 
 export const App: React.FC = () => {
   return (

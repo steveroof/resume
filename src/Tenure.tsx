@@ -1,5 +1,5 @@
-import { Job } from "./Job";
-import { ITenure } from "./data";
+import { Position } from "./Position";
+import { ITenure } from "./assets/data";
 
 export const Tenure: React.FC<ITenure> = ({
   companyName,
@@ -13,7 +13,7 @@ export const Tenure: React.FC<ITenure> = ({
       <span>{location}</span>
       <span>{locationType}</span>
       {jobs.map((j, index) => (
-        <Job key={index} {...j} />
+        <Position key={index} {...j} />
       ))}
     </>
   );

@@ -1,6 +1,6 @@
-import { IJob } from "./data";
+import { IJob } from "./assets/data";
 
-export const Job: React.FC<IJob> = ({
+export const Position: React.FC<IJob> = ({
   title,
   startDate,
   endDate,
