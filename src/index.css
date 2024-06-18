@@ -39,18 +39,19 @@
   --border-radius: 2rem;
 
   :has(.lightMode) {
+    /*this class is set on the header component*/
     /* overwrite certain values */
     --color-text: black;
-    --color-primary-25: white;
+    --color-primary-25: silver;
     --color-primary-75: white;
 
     --color-accent-pink: brown;
-    --color-accent-darkyellow: forestgreen;
+    --color-accent-darkyellow: black;
     --color-accent-gold: brown;
     --color-accent-lightyellow: brown;
-    --color-accent-salmon: brown;
+    --color-accent-salmon: forestgreen;
     --color-accent-lightblue: navy;
-    --color-accent-yellowgreen: forestgreen;
+    --color-accent-yellowgreen: black;
     --color-accent-teal: navy;
   }
 }
@@ -114,6 +115,12 @@ ul {
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  button {
+    all: unset;
+    cursor: pointer;
+    font-size: 200%;
+  }
 }
 
 main {

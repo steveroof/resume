@@ -4,19 +4,18 @@ interface IHeaderProps {
   name: string;
 }
 export const Header: React.FC<IHeaderProps> = ({ name }) => {
-  const [isDarkMode, setDarkMode] = useState(true);
+  const [isLightMode, setLightMode] = useState(false);
 
   return (
-    <header className={`header ${isDarkMode ? "darkMode" : "lightMode"}`}>
+    <header className={`header ${isLightMode ? "lightMode" : ""}`}>
       <h1>{name}</h1>
       <span className="headerDetails">
-        <label htmlFor="chkDarkMode">Dark Mode</label>
-        <input
-          id="chkDarkMode"
-          type="checkbox"
-          checked={isDarkMode}
-          onChange={() => setDarkMode((prev) => !prev)}
-        />
+        <button
+          title="Toggle theme"
+          onClick={() => setLightMode((prev) => !prev)}
+        >
+          {isLightMode ? "🌙" : "☀️"}
+        </button>
       </span>
     </header>
   );
