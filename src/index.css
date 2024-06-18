@@ -1,4 +1,4 @@
-/*global settings*/
+/*css reset*/
 *,
 *::after,
 *::before {
@@ -8,27 +8,10 @@
   font-weight: normal;
 }
 
-html {
+:root {
   /*This defines what 1rem is. To convert from pixel to rem, divide by 10. Aka 32px=3.2rem.*/
   font-size: 62.5%;
-}
 
-body {
-  font-size: var(--font-text);
-  font-family: var(--font-family);
-  background-color: var(--color-primary-25);
-  color: var(--color-text);
-  display: flex;
-  justify-content: center;
-  transition: all 0.5s;
-}
-
-/* ::selection {
-  background-color: var(--color-white);
-  color: var(--color-primary);
-} */
-
-:root {
   --font-family: "Cascadia Code", "Courier New";
   --font-text: 1.5rem;
   --font-h4: 2rem;
@@ -37,13 +20,13 @@ body {
   --font-h1: 3.5rem;
 
   --color-text: white;
-  --color-primary: black;
+  --color-shadow: black;
+  --color-primary: black; /*not used directly, only for mixing.*/
   --color-primary-25: color-mix(in srgb, var(--color-primary), transparent 25%);
   --color-primary-50: color-mix(in srgb, var(--color-primary), transparent 50%);
   --color-primary-75: color-mix(in srgb, var(--color-primary), transparent 75%);
 
   /* accent colors obtained from default vs code theme */
-  --color-accent-white: #cccccc;
   --color-accent-pink: #da70d6;
   --color-accent-darkyellow: #ffd700;
   --color-accent-gold: #d7ba7d;
@@ -57,24 +40,29 @@ body {
 
   :has(.lightMode) {
     /* overwrite certain values */
-    --color-text: navy;
-    --color-primary: gray;
-    --color-primary-25: color-mix(
-      in srgb,
-      var(--color-primary),
-      transparent 25%
-    );
-    --color-primary-50: color-mix(
-      in srgb,
-      var(--color-primary),
-      transparent 50%
-    );
-    --color-primary-75: color-mix(
-      in srgb,
-      var(--color-primary),
-      transparent 75%
-    );
+    --color-text: black;
+    --color-primary-25: white;
+    --color-primary-75: white;
+
+    --color-accent-pink: brown;
+    --color-accent-darkyellow: forestgreen;
+    --color-accent-gold: brown;
+    --color-accent-lightyellow: brown;
+    --color-accent-salmon: brown;
+    --color-accent-lightblue: navy;
+    --color-accent-yellowgreen: forestgreen;
+    --color-accent-teal: navy;
   }
+}
+
+body {
+  font-size: var(--font-text);
+  font-family: var(--font-family);
+  background-color: var(--color-primary-25);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s;
 }
 
 h1 {
@@ -109,7 +97,7 @@ ul {
   background-color: var(--color-primary-75);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 5rem var(--color-primary);
+  box-shadow: 0 0 5rem var(--color-shadow);
   margin: 3rem;
 }
 
@@ -139,7 +127,7 @@ main {
   background-color: var(--color-primary-75);
   border-radius: var(--border-radius);
   padding: 2rem;
-  box-shadow: 0 0 1rem var(--color-primary);
+  box-shadow: 0 0 1rem var(--color-shadow);
 }
 
 .footer {
