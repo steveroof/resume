@@ -2,7 +2,7 @@ export interface IData {
   summary: string;
   companies: ICompany[];
   education: IEducation[];
-  skills: string[];
+  skills: ISkills;
   updateDate: string;
 }
 
@@ -26,4 +26,11 @@ export interface IEducation {
   level?: string;
   startYear?: string;
   endYear: string;
+}
+
+export interface ISkills {
+  database: string[];
+  backend: string[];
+  frontend: string[];
+  collaboration: string[];
 }

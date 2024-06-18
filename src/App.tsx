@@ -4,50 +4,95 @@ import { myData } from "./data";
 export const App: React.FC = () => {
   const { summary, companies, education, skills, updateDate } = myData;
 
-  const jobsMarkup = companies.map((c) => {
-    const { companyName, location, locationType, jobs } = c;
+  const experienceMarkup = (
+    <div className="experience">
+      {companies.map((c) => {
+        const { companyName, location, locationType, jobs } = c;
 
-    const id = createId([companyName]);
-    return (
-      <section key={id} id={id} className="company">
-        <h3>{companyName}</h3>
-        <span>{location}</span>
-        <span>{locationType}</span>
-        {jobs.map((j) => {
-          const { title, startDate, endDate, experiences } = j;
+        const id = createId([companyName]);
+        return (
+          <div key={id} id={id} className="company">
+            <span className="companyHeading">
+              <h3>{`🏢 ${companyName}`}</h3>{" "}
+              <span className="companyHeadingDetails">
+                <span>🎯</span>
+                <span>{locationType}</span>
+                <span>|</span>
+                <span>{location}</span>
+              </span>
+            </span>
+            <div className="jobList">
+              {jobs.map((j) => {
+                const { title, startDate, endDate, experiences } = j;
 
-          const id = createId([companyName, title]);
-          return (
-            <section key={id} id={id} className="job">
-              <h4>{title}</h4>
-              {/* todo: add duration */}
-              <span>{`${startDate} - ${endDate}`}</span>
-              <ul className="experience">
-                {experiences.map((e, index) => (
-                  <li key={index}>{e}</li>
-                ))}
-              </ul>
-            </section>
-          );
-        })}
+                const id = createId([companyName, title]);
+                return (
+                  <section key={id} id={id} className="job">
+                    <span className="jobHeading">
+                      <h4>{`💼 ${title}`}</h4>
+                      <span>{`${startDate} - ${endDate} ()`}</span>
+                    </span>
+                    <ul className="experienceList">
+                      {experiences.map((e, index) => (
+                        <li key={index}>{e}</li>
+                      ))}
+                    </ul>
+                  </section>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+
+  const educationMarkup = (
+    <ul>
+      {education.map((e) => {
+        const { name, location, level, startYear, endYear } = e;
+        const id = createId([name]);
+
+        return (
+          <li key={id} id={id} className="education">
+            <span>{name}</span>
+            <span>{location}</span>
+            <span>{level}</span>
+            <span>{`${startYear} - ${endYear}`}</span>
+          </li>
+        );
+      })}
+    </ul>
+  );
+
+  const skillsMarkup = (
+    <div className="skillsGrid">
+      <section className="skillsColumn">
+        <h4>{`Database 💾`}</h4>
+        {skills.database.map((s) => (
+          <span key={s}>{s}</span>
+        ))}
       </section>
-    );
-  });
-
-  const educationMarkup = education.map((e) => {
-    const { name, location, level, startYear, endYear } = e;
-    const id = createId([name]);
-    return (
-      <div key={id} id={id} className="education">
-        <span>{name}</span>
-        <span>{location}</span>
-        <span>{level}</span>
-        <span>{`${startYear} - ${endYear}`}</span>
-      </div>
-    );
-  });
-
-  const skillsMarkup = skills.map((s, index) => <li key={index}>{s}</li>);
+      <section className="skillsColumn">
+        <h4>{`Backend ⚙️`}</h4>
+        {skills.backend.map((s) => (
+          <span key={s}>{s}</span>
+        ))}
+      </section>
+      <section className="skillsColumn">
+        <h4>{`Frontend 🎨`}</h4>
+        {skills.frontend.map((s) => (
+          <span key={s}>{s}</span>
+        ))}
+      </section>
+      <section className="skillsColumn">
+        <h4>{`Collaboration 🤝`}</h4>
+        {skills.collaboration.map((s) => (
+          <span key={s}>{s}</span>
+        ))}
+      </section>
+    </div>
+  );
 
   return (
     <div className="page">
@@ -56,24 +101,24 @@ export const App: React.FC = () => {
       </header>
 
       <main>
-        <section id="about">
-          <h2>About</h2>
+        <section id="about" className="mainSection">
+          <h2>{`💡 About`}</h2>
           <span>{summary}</span>
         </section>
 
-        <section id="experience">
-          <h2>Experience</h2>
-          {jobsMarkup}
+        <section id="skills" className="mainSection">
+          <h2>{`💻 Skills`}</h2>
+          {skillsMarkup}
         </section>
 
-        <section id="education">
-          <h2>Education</h2>
+        <section id="experience" className="mainSection">
+          <h2>{`💭 Experience`}</h2>
+          {experienceMarkup}
+        </section>
+
+        <section id="education" className="mainSection">
+          <h2>{`🎓 Education`}</h2>
           {educationMarkup}
-        </section>
-
-        <section id="skills">
-          <h2>Skills</h2>
-          <ul className="skills">{skillsMarkup}</ul>
         </section>
       </main>
 

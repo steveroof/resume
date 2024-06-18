@@ -18,12 +18,14 @@ body {
   background-color: var(--color-primary-50);
   color: var(--color-white);
   text-wrap: balance;
+  display: flex;
+  justify-content: center;
 }
 
-::selection {
-  background-color: var(--color-primary-25);
-  color: var(--color-white);
-}
+/* ::selection {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+} */
 
 :root {
   --font-family: sans-serif;
@@ -38,11 +40,10 @@ body {
   --color-primary-25: color-mix(in srgb, var(--color-primary), transparent 25%);
   --color-primary-50: color-mix(in srgb, var(--color-primary), transparent 50%);
   --color-primary-75: color-mix(in srgb, var(--color-primary), transparent 75%);
-
   --color-white: white;
+  --color-gray: gray;
 
-  display: flex;
-  justify-content: center;
+  --border-radius: 2rem;
 }
 
 h1 {
@@ -50,7 +51,9 @@ h1 {
 }
 
 h2 {
+  /* about/eductation/skills/experience */
   font-size: var(--font-h2);
+  margin-bottom: 1rem;
 }
 
 h3 {
@@ -66,18 +69,106 @@ ul {
 }
 
 .page {
-  width: 50vw;
+  max-width: 100rem;
+  border-radius: var(--border-radius);
   background-color: var(--color-primary-25);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5rem var(--color-primary);
+  margin: 3rem;
+}
+
+header {
   padding: 5rem;
-  margin: 5rem;
+  background-color: var(--color-primary-75);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.mainSection {
+  background-color: var(--color-primary-75);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: 0 0 1rem var(--color-primary);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  background-color: var(--color-primary-75);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.skillsGrid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillsColumn {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 0 5rem var(--color-primary);
+}
 
-  main {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.company {
+  background-color: var(--color-primary-75);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.companyHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.companyHeadingDetails {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.jobHeading {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.jobList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.job {
+  background-color: var(--color-primary-50);
+  padding: 1rem;
+
+  &:first-child {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+  }
+
+  &:last-child {
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
   }
 }
