@@ -34,10 +34,11 @@ export const App: React.FC = () => {
     );
   });
 
-  const educationMarkup = education.map((e, index) => {
+  const educationMarkup = education.map((e) => {
     const { name, location, level, startYear, endYear } = e;
+    const id = createId([name]);
     return (
-      <div key={index}>
+      <div key={id} id={id}>
         <span>{name}</span>
         <span>{location}</span>
         <span>{level}</span>
@@ -84,6 +85,6 @@ export const App: React.FC = () => {
 };
 
 const createId = (strings: string[]) => {
-  const id = strings.map((s) => s.toLowerCase().replace(" ", "_")).join("_");
+  const id = strings.map((s) => s.toLowerCase().replaceAll(" ", "_")).join("_");
   return id;
 };
