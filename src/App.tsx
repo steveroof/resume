@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useEffect, useState } from "react";
+import React, { PropsWithChildren, useState } from "react";
 import { myData } from "./data";
 import { ICompany, IEducation, IJob, ISkills } from "./model";
 
@@ -43,23 +43,19 @@ const MainCard: React.FC<IMainCardProps> = ({ titleText, children }) => {
 };
 
 interface IFooterProps {
-  updateDate: string;
+  updateDate: Date;
 }
 const Footer: React.FC<IFooterProps> = ({ updateDate }) => {
-  const [uptime, setUptime] = useState(0);
+  const [dateLoaded] = useState(new Date());
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setUptime((prev) => prev + 1);
-    }, 1000);
+  const msAgo = dateLoaded.getTime() - updateDate.getTime();
+  const daysAgo = Math.round(msAgo / 1000 / 60 / 60 / 24);
 
-    return () => clearInterval(interval);
-  }, []);
   return (
-    <footer>
-      <span>{`Latest patch: ${updateDate}`}</span>
-      <span>{`Unit tests: Passing`}</span>
-      <span>{`System uptime: ${uptime}s`}</span>
+    <footer className="footer">
+      <span>{`Latest patch: ${
+        updateDate.getMonth() + 1
+      }/${updateDate.getDate()}/${updateDate.getFullYear()} | ${daysAgo} day(s) ago`}</span>
     </footer>
   );
 };

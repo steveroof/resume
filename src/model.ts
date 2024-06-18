@@ -3,7 +3,7 @@ export interface IData {
   companies: ICompany[];
   educations: IEducation[];
   skills: ISkills;
-  updateDate: string;
+  updateDate: Date;
 }
 
 export interface ICompany {

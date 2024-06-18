@@ -26,5 +26,5 @@ export const myData: IData = {
     ],
     collaboration: ["Communication"],
   },
-  updateDate: "18-JUN-2024",
+  updateDate: new Date("2024-06-18 EDT"),
 };

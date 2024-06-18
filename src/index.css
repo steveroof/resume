@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: normal;
 }
 
 html {
@@ -50,6 +51,7 @@ body {
   --color-accent-salmon: #ce9178;
   --color-accent-lightblue: #9cdcfe;
   --color-accent-yellowgreen: #b5cea8;
+  --color-accent-teal: #4ec9b0;
 
   --border-radius: 2rem;
 }
@@ -111,9 +113,9 @@ main {
   box-shadow: 0 0 1rem var(--color-primary);
 }
 
-footer {
+.footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   padding: 3rem;
   background-color: var(--color-primary-75);
   border-bottom-left-radius: var(--border-radius);
@@ -161,6 +163,7 @@ footer {
 .jobHeading {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1rem;
 }
@@ -188,12 +191,12 @@ footer {
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
   }
-
-  ::marker {
-    color: var(--color-accent-lightblue);
-  }
 }
 
-.experienceList li {
+li {
   padding: 0.25rem;
+  font-weight: lighter;
+  &::marker {
+    color: var(--color-accent-teal);
+  }
 }
