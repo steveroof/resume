@@ -15,9 +15,8 @@ html {
 body {
   font-size: var(--font-text);
   font-family: var(--font-family);
-  background-color: var(--color-primary-50);
+  background-color: var(--color-primary-25);
   color: var(--color-white);
-  text-wrap: balance;
   display: flex;
   justify-content: center;
 }
@@ -28,8 +27,7 @@ body {
 } */
 
 :root {
-  --font-family: sans-serif;
-
+  --font-family: "Cascadia Code", "Courier New";
   --font-text: 1.5rem;
   --font-h4: 2rem;
   --font-h3: 2.5rem;
@@ -40,28 +38,42 @@ body {
   --color-primary-25: color-mix(in srgb, var(--color-primary), transparent 25%);
   --color-primary-50: color-mix(in srgb, var(--color-primary), transparent 50%);
   --color-primary-75: color-mix(in srgb, var(--color-primary), transparent 75%);
-  --color-white: white;
   --color-gray: gray;
+  --color-white: white;
+
+  /* accent colors obtained from default vs code theme */
+  --color-accent-white: #cccccc;
+  --color-accent-pink: #da70d6;
+  --color-accent-darkyellow: #ffd700;
+  --color-accent-gold: #d7ba7d;
+  --color-accent-lightyellow: #dcdcaa;
+  --color-accent-salmon: #ce9178;
+  --color-accent-lightblue: #9cdcfe;
+  --color-accent-yellowgreen: #b5cea8;
 
   --border-radius: 2rem;
 }
 
 h1 {
   font-size: var(--font-h1);
+  color: var(--color-accent-gold);
 }
 
 h2 {
   /* about/eductation/skills/experience */
   font-size: var(--font-h2);
   margin-bottom: 1rem;
+  color: var(--color-accent-lightblue);
 }
 
 h3 {
   font-size: var(--font-h3);
+  color: var(--color-accent-yellowgreen);
 }
 
 h4 {
   font-size: var(--font-h4);
+  color: var(--color-accent-lightyellow);
 }
 
 ul {
@@ -71,7 +83,7 @@ ul {
 .page {
   max-width: 100rem;
   border-radius: var(--border-radius);
-  background-color: var(--color-primary-25);
+  background-color: var(--color-primary-75);
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 5rem var(--color-primary);
@@ -101,7 +113,7 @@ main {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 3rem;
   background-color: var(--color-primary-75);
   border-bottom-left-radius: var(--border-radius);
@@ -143,6 +155,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: var(--color-accent-salmon);
 }
 
 .jobHeading {
@@ -152,6 +165,10 @@ footer {
   margin-bottom: 1rem;
 }
 
+.jobHeadingDetails {
+  color: var(--color-accent-pink);
+}
+
 .jobList {
   display: flex;
   flex-direction: column;
@@ -159,7 +176,7 @@ footer {
 }
 
 .job {
-  background-color: var(--color-primary-50);
+  background-color: var(--color-primary-75);
   padding: 1rem;
 
   &:first-child {
@@ -171,4 +188,12 @@ footer {
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
   }
+
+  ::marker {
+    color: var(--color-accent-lightblue);
+  }
+}
+
+.experienceList li {
+  padding: 0.25rem;
 }
