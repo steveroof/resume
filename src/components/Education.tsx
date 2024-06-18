@@ -1,3 +1,4 @@
+import React from "react";
 import { createId } from "../helpers";
 import { IEducation } from "../model";
 
@@ -6,19 +7,19 @@ interface IEducationProps {
 }
 export const Education: React.FC<IEducationProps> = ({ educations }) => {
   return (
-    <ul>
+    <div className="education">
       {educations.map((e) => {
         const { name, location, level, startYear, endYear } = e;
 
         return (
-          <li key={createId([name])} className="education">
-            <span>{name}</span>
+          <React.Fragment key={createId([name])}>
+            <span className="schoolName">{name}</span>
             <span>{location}</span>
-            <span>{level}</span>
-            <span>{`${startYear} - ${endYear}`}</span>
-          </li>
+            <span className="schoolLevel">{level}</span>
+            <span>{startYear ? `${startYear} - ${endYear}` : endYear}</span>
+          </React.Fragment>
         );
       })}
-    </ul>
+    </div>
   );
 };

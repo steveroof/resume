@@ -58,7 +58,7 @@ body {
 
 h1 {
   font-size: var(--font-h1);
-  color: var(--color-accent-gold);
+  color: var(--color-accent-darkyellow);
 }
 
 h2 {
@@ -210,6 +210,20 @@ li {
   padding: 0.25rem;
   font-weight: lighter;
   &::marker {
+    color: var(--color-accent-teal);
+  }
+}
+
+.education {
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr 1fr;
+  gap: 2rem;
+
+  .schoolName {
+    color: var(--color-accent-gold);
+  }
+
+  .schoolLevel {
     color: var(--color-accent-teal);
   }
 }
