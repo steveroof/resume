@@ -3,7 +3,6 @@ import { IJob, ICompany } from "../model";
 const signant_pi_senior: IJob = {
   title: "Senior Software Engineer",
   startDate: "May 2023",
-  endDate: "Present",
   experiences: [
     "Integrated Okta SSO into our React, .Net, jQuery, and Angular applications.",
     "Wrote complex SQL stored procedures/functions for processing custom business logic.",
@@ -52,8 +51,8 @@ const signant_pi_associate: IJob = {
 
 const signant_td: IJob = {
   title: "Programmer Analyst I",
-  startDate: "April 2015",
-  endDate: "March 2018",
+  startDate: "October 2013",
+  endDate: "April 2015",
   experiences: [
     "Worked on the implementation/configuration of existing software.",
     "Wrote SQL data scripts, responded to bug reports, built client devices.",

@@ -16,7 +16,7 @@ export interface ICompany {
 export interface IJob {
   title: string;
   startDate: string;
-  endDate: string;
+  endDate?: string;
   experiences: string[];
 }
 
