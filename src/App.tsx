@@ -50,7 +50,7 @@ export const App: React.FC = () => {
   const skillsMarkup = skills.map((s, index) => <li key={index}>{s}</li>);
 
   return (
-    <>
+    <div className="page">
       <header>
         <h1>Stephen Roof</h1>
       </header>
@@ -80,7 +80,7 @@ export const App: React.FC = () => {
       <footer>
         <span>{`Updated ${updateDate}`}</span>
       </footer>
-    </>
+    </div>
   );
 };
 

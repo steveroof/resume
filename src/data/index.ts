@@ -21,5 +21,5 @@ export const myData: IData = {
     "jQuery",
     "ASP.NET Web Forms",
   ],
-  updateDate: "18-JUN-2018",
+  updateDate: "18-JUN-2024",
 };
