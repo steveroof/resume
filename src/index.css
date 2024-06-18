@@ -22,9 +22,12 @@
   --color-text: white;
   --color-shadow: black;
   --color-primary: black; /*not used directly, only for mixing.*/
-  --color-primary-25: color-mix(in srgb, var(--color-primary), transparent 25%);
-  --color-primary-50: color-mix(in srgb, var(--color-primary), transparent 50%);
-  --color-primary-75: color-mix(in srgb, var(--color-primary), transparent 75%);
+  --color-backround: color-mix(in srgb, var(--color-primary), transparent 25%);
+  --color-primary-translucent: color-mix(
+    in srgb,
+    var(--color-primary),
+    transparent 75%
+  );
 
   /* accent colors obtained from default vs code theme */
   --color-accent-pink: #da70d6;
@@ -43,14 +46,19 @@
     /* overwrite certain values */
     --color-text: black;
     --color-shadow: gray;
-    --color-primary-25: silver;
-    --color-primary-75: rgba(255, 255, 255, 0.75);
+    --color-primary: rgb(200, 200, 200); /*not used directly, only for mixing.*/
+    --color-backround: white;
+    --color-primary-translucent: color-mix(
+      in srgb,
+      var(--color-primary),
+      transparent 75%
+    );
 
     --color-accent-pink: brown;
     --color-accent-darkyellow: black;
     --color-accent-gold: brown;
     --color-accent-lightyellow: brown;
-    --color-accent-salmon: forestgreen;
+    --color-accent-salmon: darkgreen;
     --color-accent-lightblue: navy;
     --color-accent-yellowgreen: black;
     --color-accent-teal: navy;
@@ -60,7 +68,7 @@
 body {
   font-size: var(--font-text);
   font-family: var(--font-family);
-  background-color: var(--color-primary-25);
+  background-color: var(--color-backround);
   color: var(--color-text);
   display: flex;
   justify-content: center;
@@ -96,7 +104,7 @@ ul {
 .page {
   max-width: 100rem;
   border-radius: var(--border-radius);
-  background-color: var(--color-primary-75);
+  background-color: var(--color-primary-translucent);
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 5rem var(--color-shadow);
@@ -105,7 +113,7 @@ ul {
 
 .header {
   padding: 5rem;
-  background-color: var(--color-primary-75);
+  background-color: var(--color-primary-translucent);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   display: flex;
@@ -132,7 +140,7 @@ main {
 }
 
 .mainSection {
-  background-color: var(--color-primary-75);
+  background-color: var(--color-primary-translucent);
   border-radius: var(--border-radius);
   padding: 2rem;
   box-shadow: 0 0 1rem var(--color-shadow);
@@ -143,7 +151,7 @@ main {
   justify-content: space-between;
   gap: 2rem;
   padding: 3rem;
-  background-color: var(--color-primary-75);
+  background-color: var(--color-primary-translucent);
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 
@@ -178,7 +186,7 @@ main {
 }
 
 .company {
-  background-color: var(--color-primary-75);
+  background-color: var(--color-primary-translucent);
   border-radius: var(--border-radius);
   padding: 1rem;
 }
@@ -217,7 +225,7 @@ main {
 }
 
 .job {
-  background-color: var(--color-primary-75);
+  background-color: var(--color-primary-translucent);
   padding: 1rem;
 
   &:first-child {
