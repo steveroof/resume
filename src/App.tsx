@@ -2,14 +2,14 @@ import React from "react";
 import { myData } from "./data";
 
 export const App: React.FC = () => {
-  const { summary, tenures, education, skills, updateDate } = myData;
+  const { summary, companies, education, skills, updateDate } = myData;
 
-  const jobsMarkup = tenures.map((t) => {
-    const { companyName, location, locationType, jobs } = t;
+  const jobsMarkup = companies.map((c) => {
+    const { companyName, location, locationType, jobs } = c;
 
     const id = createId([companyName]);
     return (
-      <section key={id} id={id}>
+      <section key={id} id={id} className="company">
         <h3>{companyName}</h3>
         <span>{location}</span>
         <span>{locationType}</span>
@@ -18,11 +18,11 @@ export const App: React.FC = () => {
 
           const id = createId([companyName, title]);
           return (
-            <section key={id} id={id}>
+            <section key={id} id={id} className="job">
               <h4>{title}</h4>
               {/* todo: add duration */}
               <span>{`${startDate} - ${endDate}`}</span>
-              <ul>
+              <ul className="experience">
                 {experiences.map((e, index) => (
                   <li key={index}>{e}</li>
                 ))}
@@ -38,7 +38,7 @@ export const App: React.FC = () => {
     const { name, location, level, startYear, endYear } = e;
     const id = createId([name]);
     return (
-      <div key={id} id={id}>
+      <div key={id} id={id} className="education">
         <span>{name}</span>
         <span>{location}</span>
         <span>{level}</span>
@@ -73,7 +73,7 @@ export const App: React.FC = () => {
 
         <section id="skills">
           <h2>Skills</h2>
-          <ul>{skillsMarkup}</ul>
+          <ul className="skills">{skillsMarkup}</ul>
         </section>
       </main>
 

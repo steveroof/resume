@@ -1,19 +1,19 @@
 export interface IData {
   summary: string;
-  tenures: ITenure[];
+  companies: ICompany[];
   education: IEducation[];
   skills: string[];
   updateDate: string;
 }
 
-export interface ITenure {
+export interface ICompany {
   companyName: string;
   location: string;
   locationType: string;
-  jobs: IPosition[];
+  jobs: IJob[];
 }
 
-export interface IPosition {
+export interface IJob {
   title: string;
   startDate: string;
   endDate: string;

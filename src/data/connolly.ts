@@ -1,6 +1,6 @@
-import { IPosition, ITenure } from "../model";
+import { IJob, ICompany } from "../model";
 
-const connolly_bsa: IPosition = {
+const connolly_bsa: IJob = {
   title: "Associate Business Systems Analyst",
   startDate: "August 2012",
   endDate: "October 2013",
@@ -12,7 +12,7 @@ const connolly_bsa: IPosition = {
   ],
 };
 
-export const connolly: ITenure = {
+export const connolly: ICompany = {
   companyName: "Connolly, Inc.",
   location: "Conshohocken, PA",
   locationType: "On Site",

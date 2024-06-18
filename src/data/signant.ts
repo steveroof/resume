@@ -1,6 +1,6 @@
-import { IPosition, ITenure } from "../model";
+import { IJob, ICompany } from "../model";
 
-const signant_pi_senior: IPosition = {
+const signant_pi_senior: IJob = {
   title: "Senior Software Engineer",
   startDate: "May 2023",
   endDate: "Present",
@@ -20,7 +20,7 @@ const signant_pi_senior: IPosition = {
   ],
 };
 
-const signant_pi_mid: IPosition = {
+const signant_pi_mid: IJob = {
   title: "Product Developer",
   startDate: "Mar 2018",
   endDate: "May 2023",
@@ -38,7 +38,7 @@ const signant_pi_mid: IPosition = {
   ],
 };
 
-const signant_pi_associate: IPosition = {
+const signant_pi_associate: IJob = {
   title: "Associate Product Developer",
   startDate: "April 2015",
   endDate: "March 2018",
@@ -50,7 +50,7 @@ const signant_pi_associate: IPosition = {
   ],
 };
 
-const signant_td: IPosition = {
+const signant_td: IJob = {
   title: "Programmer Analyst I",
   startDate: "April 2015",
   endDate: "March 2018",
@@ -61,7 +61,7 @@ const signant_td: IPosition = {
   ],
 };
 
-export const signant: ITenure = {
+export const signant: ICompany = {
   companyName: "Signant Health",
   location: "Blue Bell, PA",
   locationType: "On Site & Hybrid",

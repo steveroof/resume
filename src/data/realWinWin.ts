@@ -1,6 +1,6 @@
-import { IPosition, ITenure } from "../model";
+import { IJob, ICompany } from "../model";
 
-const rww_misc: IPosition = {
+const rww_misc: IJob = {
   title: "Database Application Developer",
   startDate: "September 2010",
   endDate: "August 2012",
@@ -14,7 +14,7 @@ const rww_misc: IPosition = {
   ],
 };
 
-export const realWinWin: ITenure = {
+export const realWinWin: ICompany = {
   companyName: "RealWinWin",
   location: "Philadelphia, PA",
   locationType: "On Site",
