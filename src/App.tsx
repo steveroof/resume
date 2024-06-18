@@ -3,7 +3,7 @@ import { myData } from "./data";
 import { ICompany, IEducation, IJob, ISkills } from "./model";
 
 export const App: React.FC = () => {
-  const { summary, companies, education, skills, updateDate } = myData;
+  const { summary, companies, educations, skills, updateDate } = myData;
   return (
     <div className="page">
       <header>
@@ -21,7 +21,7 @@ export const App: React.FC = () => {
           <Companies companies={companies} />
         </MainCard>
         <MainCard titleText="🎓 Education">
-          <Education education={education} />
+          <Education educations={educations} />
         </MainCard>
       </main>
 
@@ -163,12 +163,12 @@ const Job: React.FC<IJobProps> = ({ id, job }) => {
 };
 
 interface IEducationProps {
-  education: IEducation[];
+  educations: IEducation[];
 }
-const Education: React.FC<IEducationProps> = ({ education }) => {
+const Education: React.FC<IEducationProps> = ({ educations }) => {
   return (
     <ul>
-      {education.map((e) => {
+      {educations.map((e) => {
         const { name, location, level, startYear, endYear } = e;
 
         return (

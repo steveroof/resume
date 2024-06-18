@@ -1,7 +1,7 @@
 export interface IData {
   summary: string;
   companies: ICompany[];
-  education: IEducation[];
+  educations: IEducation[];
   skills: ISkills;
   updateDate: string;
 }
