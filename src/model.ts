@@ -1,4 +1,5 @@
 export interface IData {
+  name: string;
   summary: string;
   companies: ICompany[];
   educations: IEducation[];

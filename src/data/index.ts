@@ -5,6 +5,7 @@ import { realWinWin } from "./realWinWin";
 import { signant } from "./signant";
 
 export const myData: IData = {
+  name: "Stephen Roof",
   summary:
     'I believe in "keep it simple", "you ain\'t gonna need it", and continuous refactoring. I prioritize readability and maintainability. I enjoy working on front end web application development, especially writing React, Typescript, and CSS. I have extensive experience with SQL Server.',
   companies: [signant, connolly, realWinWin],

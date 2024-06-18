@@ -17,9 +17,10 @@ body {
   font-size: var(--font-text);
   font-family: var(--font-family);
   background-color: var(--color-primary-25);
-  color: var(--color-white);
+  color: var(--color-text);
   display: flex;
   justify-content: center;
+  transition: all 0.5s;
 }
 
 /* ::selection {
@@ -35,12 +36,11 @@ body {
   --font-h2: 3rem;
   --font-h1: 3.5rem;
 
+  --color-text: white;
   --color-primary: black;
   --color-primary-25: color-mix(in srgb, var(--color-primary), transparent 25%);
   --color-primary-50: color-mix(in srgb, var(--color-primary), transparent 50%);
   --color-primary-75: color-mix(in srgb, var(--color-primary), transparent 75%);
-  --color-gray: gray;
-  --color-white: white;
 
   /* accent colors obtained from default vs code theme */
   --color-accent-white: #cccccc;
@@ -54,6 +54,27 @@ body {
   --color-accent-teal: #4ec9b0;
 
   --border-radius: 2rem;
+
+  :has(.lightMode) {
+    /* overwrite certain values */
+    --color-text: navy;
+    --color-primary: gray;
+    --color-primary-25: color-mix(
+      in srgb,
+      var(--color-primary),
+      transparent 25%
+    );
+    --color-primary-50: color-mix(
+      in srgb,
+      var(--color-primary),
+      transparent 50%
+    );
+    --color-primary-75: color-mix(
+      in srgb,
+      var(--color-primary),
+      transparent 75%
+    );
+  }
 }
 
 h1 {
@@ -92,11 +113,19 @@ ul {
   margin: 3rem;
 }
 
-header {
+.header {
   padding: 5rem;
   background-color: var(--color-primary-75);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerDetails {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 main {

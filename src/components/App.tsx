@@ -1,4 +1,3 @@
-import React from "react";
 import { myData } from "../data";
 import { MainCard } from "./MainCard";
 import { Footer } from "./Footer";
@@ -6,15 +5,14 @@ import { Skills } from "./Skills";
 import { Education } from "./Education";
 import { createId } from "../helpers";
 import { Company } from "./Company";
+import { Header } from "./Header";
 
 export const App: React.FC = () => {
-  const { summary, companies, educations, skills, updateDate } = myData;
+  const { name, summary, companies, educations, skills, updateDate } = myData;
+
   return (
     <div className="page">
-      <header>
-        <h1>Stephen Roof</h1>
-      </header>
-
+      <Header name={name} />
       <main>
         <MainCard titleText="💡 About">
           <span>{summary}</span>
