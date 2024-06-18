@@ -42,8 +42,9 @@
     /*this class is set on the header component*/
     /* overwrite certain values */
     --color-text: black;
+    --color-shadow: gray;
     --color-primary-25: silver;
-    --color-primary-75: white;
+    --color-primary-75: rgba(255, 255, 255, 0.75);
 
     --color-accent-pink: brown;
     --color-accent-darkyellow: black;
