@@ -3,6 +3,7 @@ export interface IData {
   tenures: ITenure[];
   education: IEducation[];
   skills: string[];
+  updateDate: string;
 }
 
 export interface ITenure {
