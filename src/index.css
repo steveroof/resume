@@ -15,8 +15,8 @@
   --font-family: "Cascadia Code", "Courier New";
   --font-text: 1.5rem;
   --font-h4: 2rem;
-  --font-h3: 2.5rem;
-  --font-h2: 3rem;
+  --font-h3: 2rem;
+  --font-h2: 2.5rem;
   --font-h1: 3.5rem;
 
   --color-text: white;
@@ -39,7 +39,7 @@
   --color-accent-yellowgreen: #b5cea8;
   --color-accent-teal: #4ec9b0;
 
-  --border-radius: 2rem;
+  --border-radius: 1rem;
 
   :has(.lightMode) {
     /*this class is set on the header component*/
@@ -61,7 +61,7 @@
     --color-accent-gold: brown;
     --color-accent-lightyellow: brown;
     --color-accent-salmon: darkgreen;
-    --color-accent-lightblue: navy;
+    --color-accent-lightblue: #3c3c3c;
     --color-accent-yellowgreen: #3c3c3c;
     --color-accent-teal: navy;
   }
@@ -69,6 +69,7 @@
   /*default settings (I developed the site on 1/2 of my screen)*/
   --flex-direction: column;
   --app-grid: 1fr;
+  --app-grid-gap: 3rem;
   --education-grid: 1fr 1fr 2fr 1fr;
   --experience-span: 1;
   --page-width: 75vw;
@@ -106,6 +107,8 @@
     --page-margin: 0rem;
     --color-shadow: white;
     --header-padding: 2rem;
+    --app-grid-gap: 0;
+    --main-padding: 0;
   }
 }
 

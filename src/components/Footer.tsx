@@ -9,7 +9,7 @@ export const Footer: React.FC<IFooterProps> = ({ updateDate }) => {
 
   return (
     <footer className="footer">
-      <span>{`Latest patch: ${
+      <span>{`Updated: ${
         updateDate.getMonth() + 1
       }/${updateDate.getDate()}/${updateDate.getFullYear()} | ${daysAgo} day${
         daysAgo > 1 ? "s" : ""

@@ -24,7 +24,7 @@ export const App: React.FC = () => {
         <MainCard titleText="🎓 Education">
           <Education educations={educations} />
         </MainCard>
-        <MainCard titleText="💭 Experience">
+        <MainCard titleText="⏳ Experience">
           <div className="experience">
             {companies.map((c) => {
               const id = createId([c.companyName]);

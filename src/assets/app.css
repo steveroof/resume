@@ -10,7 +10,7 @@
 
   main {
     display: grid;
-    gap: 3rem;
+    gap: var(--app-grid-gap);
     padding: var(--main-padding);
     grid-template-columns: var(--app-grid);
   }
