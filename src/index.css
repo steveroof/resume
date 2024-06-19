@@ -63,6 +63,15 @@
     --color-accent-yellowgreen: #3c3c3c;
     --color-accent-teal: navy;
   }
+
+  --flex-direction: column;
+  --grid-template-columns: 1fr;
+  --experience-span: 1;
+  @media (min-width: 100rem) {
+    --flex-direction: row;
+    --grid-template-columns: 1fr 1fr 1fr;
+    --experience-span: 3;
+  }
 }
 
 body {

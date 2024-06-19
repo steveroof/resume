@@ -1,9 +1,11 @@
 .skillsGrid {
   display: flex;
+  flex-direction: var(--flex-direction);
   justify-content: space-between;
+  gap: 1rem;
 }
 
-.skillsColumn {
+.skillBlock {
   display: flex;
   flex-direction: column;
   gap: 1rem;

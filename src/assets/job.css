@@ -1,3 +1,9 @@
+.jobList {
+  display: flex;
+  flex-direction: var(--flex-direction);
+  gap: 1rem;
+}
+
 .jobHeading {
   display: flex;
   align-items: baseline;
@@ -8,12 +14,6 @@
 
 .jobHeadingDetails {
   color: var(--color-accent-pink);
-}
-
-.jobList {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .job {

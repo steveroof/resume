@@ -1,16 +1,21 @@
 .page {
-  max-width: 100rem;
+  max-width: 75vw;
   border-radius: var(--border-radius);
   background-color: var(--color-primary-translucent);
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 5rem var(--color-shadow);
   margin: 3rem;
+  text-wrap: balance;
 
   main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 3rem;
     padding: 2rem;
+    grid-template-columns: var(--grid-template-columns);
   }
+}
+
+.mainCard:nth-child(4) {
+  grid-column: span var(--experience-span);
 }

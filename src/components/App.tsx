@@ -21,6 +21,9 @@ export const App: React.FC = () => {
         <MainCard titleText="💻 Skills">
           <Skills skills={skills} />
         </MainCard>
+        <MainCard titleText="🎓 Education">
+          <Education educations={educations} />
+        </MainCard>
         <MainCard titleText="💭 Experience">
           <div className="experience">
             {companies.map((c) => {
@@ -28,9 +31,6 @@ export const App: React.FC = () => {
               return <Company key={id} id={id} company={c} />;
             })}
           </div>
-        </MainCard>
-        <MainCard titleText="🎓 Education">
-          <Education educations={educations} />
         </MainCard>
       </main>
 
