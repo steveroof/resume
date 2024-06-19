@@ -1,6 +1,7 @@
 .footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 2rem;
   padding: 3rem;
   background-color: var(--color-primary-translucent);
@@ -17,5 +18,6 @@
 
 .footerLinks {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }

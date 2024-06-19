@@ -1,12 +1,11 @@
 .skillsGrid {
-  display: flex;
-  flex-direction: var(--flex-direction);
-  justify-content: space-between;
-  gap: 1rem;
+  column-count: var(--skill-column-count);
 }
 
 .skillBlock {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  break-inside: avoid;
+  margin-bottom: 1rem;
 }
