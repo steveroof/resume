@@ -15,7 +15,7 @@ export const Job: React.FC<IJobProps> = ({ id, job }) => {
   const durationYears = durationMS / 1000 / 60 / 60 / 24 / 365;
 
   return (
-    <section id={id} className="job">
+    <section id={id} className="jobCard">
       <span className="jobHeading">
         <h4>{`💼 ${title}`}</h4>
         <span className="jobHeadingDetails">{`${startDate} - ${

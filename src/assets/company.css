@@ -23,4 +23,8 @@
   align-items: center;
   gap: 1rem;
   color: var(--color-accent-salmon);
+
+  :nth-child(4) {
+    color: var(--color-accent-teal);
+  }
 }

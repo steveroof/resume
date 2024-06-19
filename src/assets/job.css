@@ -4,20 +4,7 @@
   gap: 1rem;
 }
 
-.jobHeading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.jobHeadingDetails {
-  color: var(--color-accent-pink);
-}
-
-.job {
+.jobCard {
   background-color: var(--job-card-bg);
   padding: var(--job-card-padding);
 
@@ -30,6 +17,19 @@
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
   }
+}
+
+.jobHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.jobHeadingDetails {
+  color: var(--color-accent-pink);
 }
 
 .experience {

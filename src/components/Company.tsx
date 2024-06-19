@@ -25,9 +25,7 @@ export const Company: React.FC<ICompanyProps> = ({ id, company }) => {
         <span className="companyHeadingDetails">
           <span>🎯</span>
           <span>{locationType}</span>
-          <span>|</span>
           <span>{location}</span>
-          <span>|</span>
           <span>{`${durationYears.toFixed(1)} Year${
             durationYears > 1 ? "s" : ""
           }`}</span>
