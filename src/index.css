@@ -70,7 +70,7 @@
   --flex-direction: column;
   --app-grid: 1fr;
   --app-grid-gap: 3rem;
-  --education-grid: 1fr 1fr 2fr 1fr;
+  --education-grid: 2fr 1fr 2fr 1fr;
   --experience-span: 1;
   --page-width: 75vw;
   --page-margin: 3rem;
@@ -83,7 +83,7 @@
   /*wide desktop*/
   @media screen and (min-width: 110rem) {
     --flex-direction: row;
-    --app-grid: 1fr 1fr 1fr;
+    --app-grid: 1fr 2fr 2fr;
     --experience-span: 3;
   }
 

@@ -23,7 +23,7 @@ export const Header: React.FC<IHeaderProps> = ({ name }) => {
         className="themeButton"
         onClick={() => setLightMode((prev) => !prev)}
       >
-        {isLightMode ? "🌚" : "🌞"}
+        {isLightMode ? "☀️" : "🌑"}
       </button>
     </header>
   );
