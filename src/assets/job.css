@@ -5,7 +5,7 @@
 }
 
 .jobCard {
-  background-color: var(--job-card-bg);
+  background-color: var(--sub-card-bg);
   padding: var(--job-card-padding);
 
   &:first-child {

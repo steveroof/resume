@@ -1,7 +1,7 @@
 .company {
-  background-color: var(--color-primary-translucent);
+  background-color: var(--sub-card-bg);
   border-radius: var(--border-radius);
-  padding: 1rem;
+  padding: var(--company-card-padding);
 }
 
 .companyHeading {

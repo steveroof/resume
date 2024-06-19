@@ -64,6 +64,7 @@
     --color-accent-teal: navy;
   }
 
+  /*default settings (1/2 of a desktop screen or paper)*/
   --flex-direction: column;
   --app-grid: 1fr;
   --education-grid: 1fr 1fr 2fr 1fr;
@@ -71,22 +72,26 @@
   --page-width: 75vw;
   --page-margin: 3rem;
   --main-padding: 2rem;
+  --company-card-padding: 1rem;
   --job-card-padding: 1rem;
-  --job-card-bg: var(--color-primary-translucent);
+  --sub-card-bg: var(--color-primary-translucent);
 
+  /*desktop*/
   @media screen and (min-width: 100rem) {
     --flex-direction: row;
     --app-grid: 1fr 1fr 1fr;
     --experience-span: 3;
   }
 
+  /*mobile*/
   @media screen and (max-width: 50rem) {
-    --page-width: 100vw;
+    --page-width: 100%; /* I don't know why 100vw is not working here */
     --page-margin: 0rem;
     --main-padding: 0rem;
+    --company-card-padding: 0;
     --border-radius: 0;
     --job-card-padding: 0;
-    --job-card-bg: unset;
+    --sub-card-bg: unset;
     --education-grid: 2fr 2fr;
   }
 }
