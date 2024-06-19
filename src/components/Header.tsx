@@ -10,15 +10,21 @@ export const Header: React.FC<IHeaderProps> = ({ name }) => {
   return (
     <header className={`header ${isLightMode ? "lightMode" : ""}`}>
       <h1>{name}</h1>
-      <span className="headerDetails">
-        <button
-          title="Toggle theme"
-          className="notForPrinting"
-          onClick={() => setLightMode((prev) => !prev)}
-        >
-          {isLightMode ? "🌙" : "☀️"}
-        </button>
-      </span>
+
+      <a href="https://www.linkedin.com/in/stephenroof">
+        linkedin.com/in/stephenroof
+      </a>
+      <a href="https://github.com/steveroof/resume">
+        github.com/steveroof/resume
+      </a>
+
+      <button
+        title="Toggle theme"
+        className="themeButton"
+        onClick={() => setLightMode((prev) => !prev)}
+      >
+        {isLightMode ? "🌙" : "☀️"}
+      </button>
     </header>
   );
 };

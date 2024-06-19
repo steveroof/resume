@@ -14,14 +14,6 @@ export const Footer: React.FC<IFooterProps> = ({ updateDate }) => {
       }/${updateDate.getDate()}/${updateDate.getFullYear()} | ${daysAgo} day${
         daysAgo > 1 ? "s" : ""
       } ago`}</span>
-      <span className="footerLinks">
-        <a href="https://github.com/steveroof/resume">
-          github.com/steveroof/resume
-        </a>
-        <a href="https://www.linkedin.com/in/stephenroof">
-          linkedin.com/in/stephenroof
-        </a>
-      </span>
     </footer>
   );
 };

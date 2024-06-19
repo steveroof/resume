@@ -80,8 +80,8 @@
   --header-padding: 5rem;
   --skill-column-count: 3;
 
-  /*desktop*/
-  @media screen and (min-width: 100rem) {
+  /*wide desktop*/
+  @media screen and (min-width: 110rem) {
     --flex-direction: row;
     --app-grid: 1fr 1fr 1fr;
     --experience-span: 3;
@@ -100,7 +100,7 @@
   }
 
   @media print {
-    .notForPrinting {
+    .themeButton {
       visibility: hidden;
     }
     --page-width: 100%; /* I don't know why 100vw is not working here */
