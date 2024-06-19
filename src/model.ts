@@ -24,9 +24,8 @@ export interface IJob {
 export interface IEducation {
   name: string;
   location: string;
-  level?: string;
-  startYear?: string;
-  endYear: string;
+  level: string;
+  yearsAttended: string;
 }
 
 export interface ISkills {

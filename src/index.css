@@ -65,7 +65,8 @@
   }
 
   --flex-direction: column;
-  --grid-template-columns: 1fr;
+  --app-grid: 1fr;
+  --education-grid: 1fr 1fr 2fr 1fr;
   --experience-span: 1;
   --page-width: 75vw;
   --page-margin: 3rem;
@@ -75,7 +76,7 @@
 
   @media screen and (min-width: 100rem) {
     --flex-direction: row;
-    --grid-template-columns: 1fr 1fr 1fr;
+    --app-grid: 1fr 1fr 1fr;
     --experience-span: 3;
   }
 
@@ -86,6 +87,7 @@
     --border-radius: 0;
     --job-card-padding: 0;
     --job-card-bg: unset;
+    --education-grid: 2fr 2fr;
   }
 }
 

@@ -10,16 +10,14 @@ export const Education: React.FC<IEducationProps> = ({ educations }) => {
   return (
     <div className="education">
       {educations.map((e) => {
-        const { name, location, level, startYear, endYear } = e;
+        const { name, location, level, yearsAttended } = e;
 
         return (
           <React.Fragment key={createId([name])}>
             <span className="schoolName">{name}</span>
             <span>{location}</span>
             <span className="schoolLevel">{level}</span>
-            <span className="schoolYears">
-              {startYear ? `${startYear} - ${endYear}` : endYear}
-            </span>
+            <span className="schoolYears">{yearsAttended}</span>
           </React.Fragment>
         );
       })}

@@ -1,6 +1,6 @@
 .education {
   display: grid;
-  grid-template-columns: 2fr 2fr 3fr 1fr;
+  grid-template-columns: var(--education-grid);
   gap: 2rem;
 }
 
@@ -13,5 +13,5 @@
 }
 
 .schoolYears {
-  justify-self: end;
+  text-wrap: nowrap;
 }
