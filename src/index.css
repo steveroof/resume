@@ -67,10 +67,25 @@
   --flex-direction: column;
   --grid-template-columns: 1fr;
   --experience-span: 1;
-  @media (min-width: 100rem) {
+  --page-width: 75vw;
+  --page-margin: 3rem;
+  --main-padding: 2rem;
+  --job-card-padding: 1rem;
+  --job-card-bg: var(--color-primary-translucent);
+
+  @media screen and (min-width: 100rem) {
     --flex-direction: row;
     --grid-template-columns: 1fr 1fr 1fr;
     --experience-span: 3;
+  }
+
+  @media screen and (max-width: 50rem) {
+    --page-width: 100vw;
+    --page-margin: 0rem;
+    --main-padding: 0rem;
+    --border-radius: 0;
+    --job-card-padding: 0;
+    --job-card-bg: unset;
   }
 }
 

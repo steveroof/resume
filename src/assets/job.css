@@ -17,8 +17,8 @@
 }
 
 .job {
-  background-color: var(--color-primary-translucent);
-  padding: 1rem;
+  background-color: var(--job-card-bg);
+  padding: var(--job-card-padding);
 
   &:first-child {
     border-top-left-radius: var(--border-radius);

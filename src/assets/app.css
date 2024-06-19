@@ -1,17 +1,17 @@
 .page {
-  max-width: 75vw;
+  max-width: var(--page-width);
   border-radius: var(--border-radius);
   background-color: var(--color-primary-translucent);
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 5rem var(--color-shadow);
-  margin: 3rem;
+  margin: var(--page-margin);
   text-wrap: balance;
 
   main {
     display: grid;
     gap: 3rem;
-    padding: 2rem;
+    padding: var(--main-padding);
     grid-template-columns: var(--grid-template-columns);
   }
 }
