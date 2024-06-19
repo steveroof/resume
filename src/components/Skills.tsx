@@ -1,4 +1,5 @@
 import { ISkills } from "../model";
+import "../assets/skills.css";
 
 interface ISkillsProps {
   skills: ISkills;

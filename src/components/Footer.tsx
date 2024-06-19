@@ -1,3 +1,5 @@
+import "../assets/footer.css";
+
 interface IFooterProps {
   updateDate: Date;
 }

@@ -1,4 +1,5 @@
 import { IJob } from "../model";
+import "../assets/job.css";
 
 interface IJobProps {
   id: string;

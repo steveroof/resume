@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: var(--color-primary-translucent);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+
+  a {
+    color: var(--color-accent-lightblue);
+  }
+  a:visited {
+    color: var(--color-accent-pink);
+  }
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1rem;
+}

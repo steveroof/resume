@@ -6,6 +6,7 @@ import { Education } from "./Education";
 import { createId } from "../helpers";
 import { Company } from "./Company";
 import { Header } from "./Header";
+import "../assets/app.css";
 
 export const App: React.FC = () => {
   const { name, summary, companies, educations, skills, updateDate } = myData;

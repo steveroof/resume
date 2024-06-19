@@ -1,0 +1,25 @@
+.header {
+  padding: 5rem;
+  background-color: var(--color-primary-translucent);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: var(--font-h1);
+    color: var(--color-accent-darkyellow);
+  }
+}
+
+.headerDetails {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    all: unset;
+    cursor: pointer;
+    font-size: 200%;
+  }
+}

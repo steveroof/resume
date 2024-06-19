@@ -1,0 +1,13 @@
+.education {
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr 1fr;
+  gap: 2rem;
+}
+
+.schoolName {
+  color: var(--color-accent-gold);
+}
+
+.schoolLevel {
+  color: var(--color-accent-teal);
+}

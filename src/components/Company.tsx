@@ -1,6 +1,7 @@
 import { createId } from "../helpers";
 import { ICompany } from "../model";
 import { Job } from "./Job";
+import "../assets/company.css";
 
 interface ICompanyProps {
   id: string;

@@ -1,0 +1,10 @@
+.skillsGrid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

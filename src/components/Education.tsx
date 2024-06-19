@@ -1,6 +1,7 @@
 import React from "react";
 import { createId } from "../helpers";
 import { IEducation } from "../model";
+import "../assets/education.css";
 
 interface IEducationProps {
   educations: IEducation[];

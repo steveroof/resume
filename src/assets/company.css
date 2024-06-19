@@ -1,0 +1,25 @@
+.company {
+  background-color: var(--color-primary-translucent);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.companyHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  h3 {
+    font-size: var(--font-h3);
+    color: var(--color-accent-yellowgreen);
+  }
+}
+
+.companyHeadingDetails {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-accent-salmon);
+}

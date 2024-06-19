@@ -1,0 +1,16 @@
+.page {
+  max-width: 100rem;
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary-translucent);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5rem var(--color-shadow);
+  margin: 3rem;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+  }
+}

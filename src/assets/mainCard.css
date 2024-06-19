@@ -1,0 +1,13 @@
+.mainCard {
+  background-color: var(--color-primary-translucent);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: 0 0 1rem var(--color-shadow);
+
+  h2 {
+    /* about/eductation/skills/experience */
+    font-size: var(--font-h2);
+    margin-bottom: 1rem;
+    color: var(--color-accent-lightblue);
+  }
+}
