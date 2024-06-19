@@ -11,10 +11,16 @@ export const Footer: React.FC<IFooterProps> = ({ updateDate }) => {
     <footer className="footer">
       <span>{`Latest patch: ${
         updateDate.getMonth() + 1
-      }/${updateDate.getDate()}/${updateDate.getFullYear()} | ${daysAgo} day(s) ago`}</span>
+      }/${updateDate.getDate()}/${updateDate.getFullYear()} | ${daysAgo} day${
+        daysAgo > 1 ? "s" : ""
+      } ago`}</span>
       <span className="footerLinks">
-        <a href="https://github.com/steveroof/resume">View the code</a>
-        <a href="www.linkedin.com/in/stephenroof">Linkedin</a>
+        <a href="https://github.com/steveroof/resume">
+          github.com/steveroof/resume
+        </a>
+        <a href="https://www.linkedin.com/in/stephenroof">
+          linkedin.com/in/stephenroof
+        </a>
       </span>
     </footer>
   );

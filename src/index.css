@@ -45,7 +45,9 @@
     /*this class is set on the header component*/
     /* overwrite certain values */
     --color-text: black;
-    --color-shadow: gray;
+    @media screen {
+      --color-shadow: silver;
+    }
     --color-primary: #c8c8c8; /*not used directly, only for mixing.*/
     --color-backround: white;
     --color-primary-translucent: color-mix(
@@ -64,7 +66,7 @@
     --color-accent-teal: navy;
   }
 
-  /*default settings (1/2 of a desktop screen or paper)*/
+  /*default settings (I developed the site on 1/2 of my screen)*/
   --flex-direction: column;
   --app-grid: 1fr;
   --education-grid: 1fr 1fr 2fr 1fr;
@@ -74,7 +76,7 @@
   --main-padding: 2rem;
   --company-card-padding: 1rem;
   --job-card-padding: 1rem;
-  --sub-card-bg: var(--color-primary-translucent);
+  --header-padding: 5rem;
 
   /*desktop*/
   @media screen and (min-width: 100rem) {
@@ -91,8 +93,17 @@
     --company-card-padding: 0;
     --border-radius: 0;
     --job-card-padding: 0;
-    --sub-card-bg: unset;
     --education-grid: 2fr 2fr;
+  }
+
+  @media print {
+    .notForPrinting {
+      visibility: hidden;
+    }
+    --page-width: 100%; /* I don't know why 100vw is not working here */
+    --page-margin: 0rem;
+    --color-shadow: white;
+    --header-padding: 2rem;
   }
 }
 

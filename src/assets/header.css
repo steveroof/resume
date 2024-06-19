@@ -1,5 +1,5 @@
 .header {
-  padding: 5rem;
+  padding: var(--header-padding);
   background-color: var(--color-primary-translucent);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);

@@ -1,5 +1,4 @@
 .company {
-  background-color: var(--sub-card-bg);
   border-radius: var(--border-radius);
   padding: var(--company-card-padding);
 }
