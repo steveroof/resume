@@ -11,3 +11,7 @@
 .schoolLevel {
   color: var(--color-accent-teal);
 }
+
+.schoolYears {
+  justify-self: end;
+}

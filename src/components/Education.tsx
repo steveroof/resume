@@ -17,7 +17,9 @@ export const Education: React.FC<IEducationProps> = ({ educations }) => {
             <span className="schoolName">{name}</span>
             <span>{location}</span>
             <span className="schoolLevel">{level}</span>
-            <span>{startYear ? `${startYear} - ${endYear}` : endYear}</span>
+            <span className="schoolYears">
+              {startYear ? `${startYear} - ${endYear}` : endYear}
+            </span>
           </React.Fragment>
         );
       })}

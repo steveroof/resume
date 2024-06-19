@@ -46,7 +46,7 @@
     /* overwrite certain values */
     --color-text: black;
     --color-shadow: gray;
-    --color-primary: rgb(200, 200, 200); /*not used directly, only for mixing.*/
+    --color-primary: #c8c8c8; /*not used directly, only for mixing.*/
     --color-backround: white;
     --color-primary-translucent: color-mix(
       in srgb,
@@ -55,12 +55,12 @@
     );
 
     --color-accent-pink: brown;
-    --color-accent-darkyellow: black;
+    --color-accent-darkyellow: #3c3c3c;
     --color-accent-gold: brown;
     --color-accent-lightyellow: brown;
     --color-accent-salmon: darkgreen;
     --color-accent-lightblue: navy;
-    --color-accent-yellowgreen: black;
+    --color-accent-yellowgreen: #3c3c3c;
     --color-accent-teal: navy;
   }
 }
