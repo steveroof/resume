@@ -9,7 +9,7 @@ export const Header: React.FC<IHeaderProps> = ({ name }) => {
 
   return (
     <header className={`header ${isLightMode ? "lightMode" : ""}`}>
-      <h1>{name}</h1>
+      <h1 className="name">{name}</h1>
 
       <a href="https://www.linkedin.com/in/stephenroof">
         linkedin.com/in/stephenroof

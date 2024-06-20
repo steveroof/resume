@@ -33,3 +33,14 @@
   top: 1rem;
   right: 1rem;
 }
+
+.name {
+  border-bottom: 1px solid gray;
+
+  &::after {
+    content: "I";
+    color: gray;
+    font-weight: lighter;
+    margin-left: 3rem;
+  }
+}
