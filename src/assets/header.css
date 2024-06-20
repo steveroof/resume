@@ -12,16 +12,16 @@
 
   h1 {
     font-size: var(--font-h1);
-    color: var(--color-accent-darkyellow);
+    color: var(--color-accent-primary);
   }
   a {
-    color: var(--color-accent-lightblue);
+    color: var(--color-accent-secondary);
     @media print {
       text-decoration: none;
     }
   }
   a:visited {
-    color: var(--color-accent-pink);
+    color: var(--color-accent-tertiary);
   }
 }
 

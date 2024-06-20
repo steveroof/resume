@@ -30,14 +30,9 @@
   );
 
   /* accent colors obtained from default vs code theme */
-  --color-accent-pink: #da70d6;
-  --color-accent-darkyellow: #ffd700;
-  --color-accent-gold: #d7ba7d;
-  --color-accent-lightyellow: #dcdcaa;
-  --color-accent-salmon: #ce9178;
-  --color-accent-lightblue: #9cdcfe;
-  --color-accent-yellowgreen: #b5cea8;
-  --color-accent-teal: #4ec9b0;
+  --color-accent-primary: #4ec9b0;
+  --color-accent-secondary: #d7ba7d;
+  --color-accent-tertiary: #da70d6;
 
   --border-radius: 1rem;
 
@@ -56,14 +51,9 @@
       transparent 75%
     );
 
-    --color-accent-pink: navy;
-    --color-accent-darkyellow: #3c3c3c;
-    --color-accent-gold: brown;
-    --color-accent-lightyellow: brown;
-    --color-accent-salmon: darkgreen;
-    --color-accent-lightblue: #3c3c3c;
-    --color-accent-yellowgreen: #3c3c3c;
-    --color-accent-teal: navy;
+    --color-accent-primary: navy;
+    --color-accent-secondary: brown;
+    --color-accent-tertiary: darkgreen;
   }
 
   /*default settings (I developed the site on 1/2 of my screen)*/
@@ -126,5 +116,4 @@ body {
 /* this h4 styling is currently shared on skills and jobs */
 h4 {
   font-size: var(--font-h4);
-  color: var(--color-accent-lightyellow);
 }

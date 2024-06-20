@@ -14,7 +14,7 @@
 
   h3 {
     font-size: var(--font-h3);
-    color: var(--color-accent-yellowgreen);
+    color: var(--color-accent-secondary);
   }
 }
 
@@ -22,9 +22,9 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  color: var(--color-accent-salmon);
+  color: var(--color-accent-tertiary);
 
   :nth-child(4) {
-    color: var(--color-accent-teal);
+    color: var(--color-accent-secondary);
   }
 }

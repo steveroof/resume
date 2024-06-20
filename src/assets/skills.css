@@ -8,4 +8,8 @@
   gap: 1rem;
   break-inside: avoid;
   margin-bottom: 1rem;
+
+  h4 {
+    color: var(--color-accent-secondary);
+  }
 }
