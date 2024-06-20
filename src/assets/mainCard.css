@@ -7,7 +7,7 @@
   h2 {
     /* about/eductation/skills/experience */
     font-size: var(--font-h2);
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     color: var(--color-accent-lightblue);
   }
 }

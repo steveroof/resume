@@ -70,12 +70,12 @@
   --flex-direction: column;
   --app-grid: 1fr;
   --app-grid-gap: 3rem;
-  --education-grid: 2fr 1fr 2fr 1fr;
+  --education-grid: 1fr 1fr 1fr 1fr;
+  --education-gap: 5rem;
   --experience-span: 1;
-  --page-width: 75vw;
+  --page-width: 192rem;
   --page-margin: 3rem;
   --main-padding: 2rem;
-  --company-card-padding: 1rem;
   --job-card-padding: 1rem;
   --header-padding: 5rem;
   --skill-column-count: 3;
@@ -83,7 +83,7 @@
   /*wide desktop*/
   @media screen and (min-width: 110rem) {
     --flex-direction: row;
-    --app-grid: 1fr 2fr 2fr;
+    --app-grid: 1fr 1fr 2fr;
     --experience-span: 3;
   }
 
@@ -92,10 +92,10 @@
     --page-width: 100%; /* I don't know why 100vw is not working here */
     --page-margin: 0rem;
     --main-padding: 0rem;
-    --company-card-padding: 0;
     --border-radius: 0;
     --job-card-padding: 0;
-    --education-grid: 2fr 2fr;
+    --education-grid: 1fr;
+    --education-gap: 1rem;
     --skill-column-count: 2;
   }
 

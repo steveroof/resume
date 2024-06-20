@@ -1,17 +1,13 @@
 .education {
   display: grid;
   grid-template-columns: var(--education-grid);
-  gap: 2rem;
+  row-gap: var(--education-gap);
+
+  span {
+    align-self: center;
+  }
 }
 
 .schoolName {
-  color: var(--color-accent-gold);
-}
-
-.schoolLevel {
-  color: var(--color-accent-teal);
-}
-
-.schoolYears {
-  text-wrap: nowrap;
+  color: var(--color-accent-lightyellow);
 }

@@ -16,8 +16,8 @@ export const Education: React.FC<IEducationProps> = ({ educations }) => {
           <React.Fragment key={createId([name])}>
             <span className="schoolName">{name}</span>
             <span>{location}</span>
-            <span className="schoolLevel">{level}</span>
-            <span className="schoolYears">{yearsAttended}</span>
+            <span>{level}</span>
+            <span>{yearsAttended}</span>
           </React.Fragment>
         );
       })}

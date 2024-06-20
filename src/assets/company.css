@@ -1,6 +1,6 @@
 .company {
   border-radius: var(--border-radius);
-  padding: var(--company-card-padding);
+  padding: 1rem;
   background-color: var(--color-primary-translucent);
 }
 
