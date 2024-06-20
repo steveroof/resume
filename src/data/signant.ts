@@ -2,7 +2,7 @@ import { IJob, ICompany } from "../model";
 
 const signant_pi_senior: IJob = {
   title: "Senior Software Engineer",
-  startDate: "May 2023",
+  startDate: "2023-05",
   experiences: [
     "Integrated Okta SSO into our React, .Net, jQuery, and Angular applications.",
     "Wrote complex SQL stored procedures/functions for processing custom business logic.",
@@ -21,8 +21,8 @@ const signant_pi_senior: IJob = {
 
 const signant_pi_mid: IJob = {
   title: "Product Developer",
-  startDate: "Mar 2018",
-  endDate: "May 2023",
+  startDate: "2018-03",
+  endDate: "2023-05",
   experiences: [
     "Created a fully tested and documented React component library and integrated it with our applications.",
     "Created new SPA applications in React with .Net Core API, configured Swagger.",
@@ -39,8 +39,8 @@ const signant_pi_mid: IJob = {
 
 const signant_pi_associate: IJob = {
   title: "Associate Product Developer",
-  startDate: "April 2015",
-  endDate: "March 2018",
+  startDate: "2015-04",
+  endDate: "2018-03",
   experiences: [
     "Worked in large and complex ASP Webforms codebase to reduce the number of postbacks and full page reloads by switching to jQuery Ajax code.",
     "Worked on a new application written in ASP.NET MVC and Entity Framework to replace a legacy Winforms application.",
@@ -51,8 +51,8 @@ const signant_pi_associate: IJob = {
 
 const signant_td: IJob = {
   title: "Programmer Analyst I",
-  startDate: "October 2013",
-  endDate: "April 2015",
+  startDate: "2013-10",
+  endDate: "2015-04",
   experiences: [
     "Worked on the implementation/configuration of existing software.",
     "Wrote SQL data scripts, responded to bug reports, built client devices.",

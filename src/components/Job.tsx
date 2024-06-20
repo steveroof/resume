@@ -1,5 +1,6 @@
 import { IJob } from "../model";
 import "../assets/job.css";
+import { getDurationYears } from "../helpers";
 
 interface IJobProps {
   id: string;
@@ -7,22 +8,15 @@ interface IJobProps {
 }
 export const Job: React.FC<IJobProps> = ({ id, job }) => {
   const { title, startDate, endDate, experiences } = job;
-
-  const durationMS =
-    (endDate ? new Date(endDate) : new Date()).getTime() -
-    new Date(startDate).getTime();
-
-  const durationYears = durationMS / 1000 / 60 / 60 / 24 / 365;
+  const { startAndEnd, duration } = getDurationYears(startDate, endDate);
 
   return (
     <section id={id} className="jobCard">
       <span className="jobHeading">
         <h4>{`💼 ${title}`}</h4>
-        <span className="jobHeadingDetails">{`${startDate} - ${
-          endDate ?? "Present"
-        } (${durationYears.toFixed(1)} year${
-          durationYears > 1 ? "s" : ""
-        })`}</span>
+        <span className="jobHeadingDetails">
+          {`${startAndEnd} (${duration})`}
+        </span>
       </span>
       <ul className="experienceList">
         {experiences.map((e, index) => (

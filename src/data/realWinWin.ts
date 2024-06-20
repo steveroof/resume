@@ -2,8 +2,8 @@ import { IJob, ICompany } from "../model";
 
 const rww_misc: IJob = {
   title: "Database Application Developer",
-  startDate: "September 2010",
-  endDate: "August 2012",
+  startDate: "2010-09",
+  endDate: "2012-08",
   experiences: [
     "Identified automation and data storage needs within the company.",
     "Worked to develop custom database applications from conception to production.",

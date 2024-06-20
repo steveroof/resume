@@ -1,4 +1,4 @@
-import { createId } from "../helpers";
+import { createId, getDurationYears } from "../helpers";
 import { ICompany } from "../model";
 import { Job } from "./Job";
 import "../assets/company.css";
@@ -10,13 +10,9 @@ interface ICompanyProps {
 export const Company: React.FC<ICompanyProps> = ({ id, company }) => {
   const { companyName, locationType, location, jobs } = company;
   //this assumes an ordering of newest at the top in the data object. todo: improve.
-  const start = jobs[jobs.length - 1].startDate;
-  const end = jobs[0].endDate;
-
-  const durationMS =
-    (end ? new Date(end) : new Date()).getTime() - new Date(start).getTime();
-
-  const durationYears = durationMS / 1000 / 60 / 60 / 24 / 365;
+  const startDate = jobs[jobs.length - 1].startDate;
+  const endDate = jobs[0].endDate;
+  const { duration } = getDurationYears(startDate, endDate);
 
   return (
     <div id={id} className="company">
@@ -26,9 +22,7 @@ export const Company: React.FC<ICompanyProps> = ({ id, company }) => {
           <span>🎯</span>
           <span>{locationType}</span>
           <span>{location}</span>
-          <span>{`${durationYears.toFixed(1)} Year${
-            durationYears > 1 ? "s" : ""
-          }`}</span>
+          <span>{duration}</span>
         </span>
       </span>
       <div className="jobList">
