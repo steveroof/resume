@@ -87,6 +87,7 @@
     --education-grid: 1fr;
     --education-gap: 1rem;
     --skill-column-count: 2;
+    --header-padding: 2rem;
   }
 
   @media print {

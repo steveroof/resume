@@ -22,7 +22,7 @@ export const Company: React.FC<ICompanyProps> = ({ id, company }) => {
           <span>🎯</span>
           <span>{locationType}</span>
           <span>{location}</span>
-          <span>{duration}</span>
+          <span>{`(${duration})`}</span>
         </span>
       </span>
       <div className="jobList">

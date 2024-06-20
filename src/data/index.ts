@@ -25,7 +25,11 @@ export const myData: IData = {
       "Angular",
       "jQuery",
     ],
-    collaboration: ["Communication"],
+    collaboration: [
+      "Code reviews",
+      "Technical documentation",
+      "Open communication",
+    ],
   },
   updateDate: new Date("2024-06-17 EDT"),
 };

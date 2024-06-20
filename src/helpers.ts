@@ -8,7 +8,6 @@ export const getDurationYears = (
   endDateString?: string
 ) => {
   const isoDetails = "-01T00:00:00.000-05:00"; //add east coast timezone to show the correct months and not be one month early
-  console.log(`${startDateString}${isoDetails}`);
   const startDate = new Date(`${startDateString}${isoDetails}`);
   const endDate = endDateString
     ? new Date(`${endDateString}${isoDetails}`)
