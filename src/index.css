@@ -51,9 +51,9 @@
       transparent 75%
     );
 
-    --color-accent-primary: navy;
-    --color-accent-secondary: brown;
-    --color-accent-tertiary: darkgreen;
+    --color-accent-primary: darkgreen;
+    --color-accent-secondary: navy;
+    --color-accent-tertiary: brown;
   }
 
   /*default settings (I developed the site on 1/2 of my screen)*/
@@ -100,6 +100,7 @@
     --header-padding: 2rem;
     --app-grid-gap: 0;
     --main-padding: 0;
+    --color-text: black;
     font-size: 40%; /*shrink the whole layout*/
   }
 }
